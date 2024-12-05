@@ -135,7 +135,7 @@ h2 {
 }
 
 .details p {
-  font-size: calc(2px + 1.7vh);
+  font-size: calc(1px + 1.4vh);
   display: flex;
   align-items: center;
   gap: 10px;
