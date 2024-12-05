@@ -49,7 +49,7 @@ body {
 }
 
 .header h1 {
-  font-family: 'arial', cursive;
+  font-family: 'arial';
   font-size: 2rem;
   color: #ffffffca;
   text-shadow: 0 0 10px  #ffffffb3, 0 0 20px #ffffffb3;
@@ -101,7 +101,7 @@ h2 {
   text-shadow: 0 0 5px #ffffff, 0 0 15px #ffffff, 0 0 20px #000000,
                0 0 40px #000000, 0 0 60px #ff0000, 0 0 10px #000000, 0 0 98px #ff0000;
   color: #fff6a9;
-  font-family: "dizhitl", cursive;
+  font-family: "dizhitl";
   text-align: center;
   animation: blink2 6s infinite;
   margin-bottom: 20px;
