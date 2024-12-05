@@ -259,97 +259,81 @@ h2 {
   z-index: 10; /* Por encima de todo */
   pointer-events: none;
 }
-
+/* Ajustes generales para pantallas móviles */
 @media (max-width: 768px) {
-  h2 {
-    font-size: calc(6px + 5vh);
-  }
-
-  .details {
-    font-size: 0.9em;
-    padding: 15px;
-  }
-
-  .btn-neon {
+  body {
     font-size: 16px;
-    padding: 10px 15px;
   }
 
+  /* Reducir el tamaño del título */
+  h2 {
+    font-size: calc(12px + 5vh); /* Asegura que el título sea más pequeño en pantallas pequeñas */
+    margin-bottom: 20px; /* Reducir espacio debajo del título */
+  }
+
+  /* Asegurar que los detalles no ocupen demasiado espacio */
+  .details {
+    padding: 15px;
+    font-size: 1rem; /* Ajustar el tamaño de fuente */
+  }
+
+  /* Ajustes para el botón */
+  .btn-neon {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+  /* Evitar que el código en la animación sea muy grande */
   .animation {
-    font-size: 0.9em;
+    font-size: 1em;
+    margin-top: 20px; /* Reducir espacio superior */
+  }
+
+  /* Limitar la altura del canvas de la matriz */
+  #matrix {
+    height: 30%; /* Hacer la matriz más pequeña en dispositivos móviles */
+  }
+
+  /* Ajustes de la matriz */
+  .matrix-container {
+    padding: 10px; /* Reducir padding */
+  }
+
+  /* Asegurar que el canvas de confeti no interfiera */
+  #confetti-canvas {
+    height: 100%;
+    width: 100%;
+  }
+
+  /* Asegurar que los detalles tengan un buen espacio entre sí */
+  .details p {
+    font-size: calc(12px + 2vh); /* Asegura que el texto no quede demasiado pequeño */
   }
 }
 
+/* Para dispositivos muy pequeños */
 @media (max-width: 480px) {
   h2 {
-    font-size: calc(5px + 4vh);
+    font-size: calc(10px + 5vh); /* Ajuste aún más pequeño para pantallas muy pequeñas */
   }
 
   .details p {
-    font-size: calc(1px + 1.5vh);
+    font-size: calc(10px + 1.5vh); /* Ajuste más pequeño */
   }
 
   .btn-neon {
     font-size: 14px;
-    padding: 8px 12px;
+    padding: 8px 15px;
   }
 
   .animation {
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
 }
-
-/* Estilo por defecto (para pantallas grandes) */
-body {
-  font-size: 18px;
+.animation .code-line {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
-
-@media (max-width: 768px) {
-  /* Para pantallas con un ancho máximo de 768px (tabletas y móviles) */
-  body {
-    font-size: 16px;
-  }
-
-  .header {
-    text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-  /* Para pantallas con un ancho máximo de 480px (móviles pequeños) */
-  body {
-    font-size: 14px;
-  }
-
-  .header {
-    font-size: 20px;
-  }
-}
-.container {
-  display: flex;
-  flex-wrap: wrap;  /* Permite que los elementos se ajusten si no caben */
-  justify-content: space-between;
-  
-}
-
-.item {
-  flex: 1 1 30%; /* Se ajusta al 30% del ancho, pero es flexible */
-  
-}
-table {
-  width: 100%; /* La tabla se ajustará al tamaño del contenedor */
-  table-layout: fixed; /* Las celdas se distribuirán igualmente */
-}
-
-/* Para móviles */
-@media (max-width: 768px) {
-  .confetti-canvas {
-    width: 100%;
-    height: 100%;
-  }
-
-  .matrix-canvas {
-    width: 100%;
-    height: 200px; /* Reducir el tamaño en móviles */
-  }
+#matrix {
+  height: 30%; /* O 25% dependiendo del espacio necesario */
 }
