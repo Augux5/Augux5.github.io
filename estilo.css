@@ -298,3 +298,58 @@ h2 {
     font-size: 0.8em;
   }
 }
+
+/* Estilo por defecto (para pantallas grandes) */
+body {
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  /* Para pantallas con un ancho máximo de 768px (tabletas y móviles) */
+  body {
+    font-size: 16px;
+  }
+
+  .header {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Para pantallas con un ancho máximo de 480px (móviles pequeños) */
+  body {
+    font-size: 14px;
+  }
+
+  .header {
+    font-size: 20px;
+  }
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;  /* Permite que los elementos se ajusten si no caben */
+  justify-content: space-between;
+  
+}
+
+.item {
+  flex: 1 1 30%; /* Se ajusta al 30% del ancho, pero es flexible */
+  
+}
+table {
+  width: 100%; /* La tabla se ajustará al tamaño del contenedor */
+  table-layout: fixed; /* Las celdas se distribuirán igualmente */
+}
+
+/* Para móviles */
+@media (max-width: 768px) {
+  .confetti-canvas {
+    width: 100%;
+    height: 100%;
+  }
+
+  .matrix-canvas {
+    width: 100%;
+    height: 200px; /* Reducir el tamaño en móviles */
+  }
+}
